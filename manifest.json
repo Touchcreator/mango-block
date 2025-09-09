@@ -1,0 +1,22 @@
+{
+    "manifest_version": 3,
+    "name": "Mango Block",
+    "version": "0.6.7",
+    "content_scripts": [
+        {
+            "matches": ["*://*.discord.com/*", "*://*.youtube.com/*"],
+            "js": ["data/script.js"]
+        }
+    ],
+    "web_accessible_resources": [
+        {
+
+            "resources": ["data/block.html"],
+            "matches": ["*://*.discord.com/*", "*://*.youtube.com/*"]
+
+        }
+    ],
+    "action": {
+        "default_popup": "data/popup.html"
+    }
+}
